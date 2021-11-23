@@ -1,0 +1,27 @@
+{
+  "name": "newproj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "npx knex migrate:latest --knexfile database/knexfile.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "docs": "apidoc -e '(node_modules|public)' -o public/apidoc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "file:apidoc",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "knex": "^0.95.13",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "grunt-apidoc": "^0.11.0",
+    "nodemon": "^2.0.14"
+  }
+}
